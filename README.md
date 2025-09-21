@@ -86,6 +86,21 @@ En cuanto a su frecuencia, el EOG se considera una señal de baja frecuencia, co
 
 Se descargó un EOG en .txt del generador para graficarlo en colab y a su vez obtener algunos datos. Para esto se tuvo en cuenta la frecuencia de Nyquist que es la mitad de la frecuencia de muestreo necesaria para capturar adecuadamente todas las componentes de frecuencia de una señal sin que ocurra aliasing. Es decir, si la señal tiene una componente de frecuencia máxima, la frecuencia de muestreo debe ser al menos el doble de la frecuencia maxima. Entonces se tomó la frecuencia máxima de 150 Hz y se multiplico por 2, lo que dio 300 Hz y según la guia este valor se multiplica por 4, dando 1200 Hz, que fue el valor de frecuencia de muestreo usado para digitalizar la señal.  
 
+       ruta = "/content/drive/MyDrive/Colab Notebooks/senal.txt"
+       senal = np.loadtxt(ruta) * 1000  
+       fs = 1200
+       tiempo = np.arange(len(senal)) / fs
+       
+       plt.figure(figsize=(12,4))
+       plt.plot(tiempo, senal)
+       plt.title("Señal EOG")
+       plt.xlabel("Tiempo [s]")
+       plt.ylabel("Voltaje [mV]")
+       plt.grid()
+       plt.show()
+<img width="1026" height="393" alt="image" src="https://github.com/user-attachments/assets/f9d9162d-4f61-427b-bdba-871281fda9a6" />
+
+
 
 
 
