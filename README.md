@@ -4,11 +4,13 @@ María Alejandra Torres Cardenas
 Silvia Lorena Vargas Rueda  
 
 ## Convolución, correlación y transformada de Fourier
-### Parte A:
+### Parte A:  
+La convolución es una operación matemática que combina dos funciones (o señales) para describir cómo una afecta a la otra, especialmente en sistemas lineales e invariantes en el tiempo. Hay tres tipos que sonnnn
+En el caso discreto, se usa la fórmula:  
+
 Teniendo el sistema h[n] = {5,6,0,8,3,4} y la señal x[n] = {1,0,7,6,7,3,6,2,2,9}:  
 1. Encuentre la señal 𝑦[𝑛] resultante de la convolución usando sumatorias (a mano). 
 <img width="1392" height="646" alt="image" src="https://github.com/user-attachments/assets/341fe452-4ea3-4a34-a475-8bda0c3212fb" />
-
 
 2. Encuentre la representación gráfica y secuencial (a mano).
 <img width="1442" height="1229" alt="image" src="https://github.com/user-attachments/assets/89073635-2828-4488-b3ed-03adf264a7d6" />
@@ -42,3 +44,8 @@ Teniendo el sistema h[n] = {5,6,0,8,3,4} y la señal x[n] = {1,0,7,6,7,3,6,2,2,9
 ### Parte B:
 
 ### Parte C:
+
+### Referencias:
+- Gila, L., Villanueva, A., & Cabeza, R. (2009). Fisiopatología y técnicas de registro de los movimientos oculares. Anales del Sistema Sanitario de Navarra, 32(Supl. 3), 9–26. https://scielo.isciii.es/pdf/asisna/v32s3/original2.pdf
+- MathWorks. (s.f.). Convolución - MATLAB & Simulink. https://la.mathworks.com/discovery/convolution.html
+- Oppenheim, A. V., Willsky, A. S., & Nawab, S. H. (1997). Signals and Systems (2nd ed.). Prentice Hall. https://archive.org/details/OppenheimSignalsAndSystems2ndEd
