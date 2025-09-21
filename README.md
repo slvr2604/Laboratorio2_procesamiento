@@ -3,10 +3,13 @@ Lina María Cortés Almonacid
 María Alejandra Torres Cardenas  
 Silvia Lorena Vargas Rueda  
 
-## Convolución, correlación y transformada de Fourier
+## Convolución, correlación y transformada de Fourier  
+En este laboratorio se tuvieron en cuenta tres operaciones matemáticas: la convolución, la correlación y las transformadas. La convolución permite determinar cómo un sistema responde a una señal de entrada, siendo esencial en el análisis de sistemas lineales e invariantes en el tiempo (LTI). La correlación, por su parte, mide la similitud entre dos señales a lo largo del tiempo, siendo una herramienta valiosa en el procesamiento de señales, la detección de patrones y la reducción de ruido. Las transformadas por su parte, como la de Fourier, facilitan el análisis de señales en el dominio de la frecuencia. Estas herramientas permiten descomponer señales en sus componentes fundamentales, optimizando la compresión de datos.  
+
 ### Parte A:  
-La convolución es una operación matemática que combina dos funciones (o señales) para describir cómo una afecta a la otra, especialmente en sistemas lineales e invariantes en el tiempo. Hay tres tipos que sonnnn
-En el caso discreto, se usa la fórmula:  
+Se tomaron los datos de tres estudiantes, donde se estableció un sistema y una señal de entrada basados en sus datos personales. Para cada estudiante se definió el sistema h[n] como una secuencia discreta formada por los dígitos de su código de estudiante. Se definió la señal de entrada x[n] como la secuencia compuesta por los dígitos de su número de identidad. A partir de estas secuencias, se obtuvo la señal de salida y[n] mediante la operación de convolución discreta.  
+
+**Lina Cortés**  
 
 Teniendo el sistema h[n] = {5,6,0,8,3,4} y la señal x[n] = {1,0,7,6,7,3,6,2,2,9}:  
 1. Encuentre la señal 𝑦[𝑛] resultante de la convolución usando sumatorias (a mano). 
@@ -38,7 +41,9 @@ Teniendo el sistema h[n] = {5,6,0,8,3,4} y la señal x[n] = {1,0,7,6,7,3,6,2,2,9
    
 
 
+**Silvia..**
 
+**Alejandra Torres**
 
 
 ### Parte B:
