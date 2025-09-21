@@ -7,7 +7,8 @@ Silvia Lorena Vargas Rueda
 ### Parte A:
 Teniendo el sistema h[n] = {5,6,0,8,3,4} y la señal x[n] = {1,0,7,6,7,3,6,2,2,9}:  
 1. Encuentre la señal 𝑦[𝑛] resultante de la convolución usando sumatorias (a mano). 
-<img width="1474" height="646" alt="image" src="https://github.com/user-attachments/assets/78fa8425-e75a-4f4e-b030-6d6e624f6bc0" />
+<img width="1392" height="646" alt="image" src="https://github.com/user-attachments/assets/341fe452-4ea3-4a34-a475-8bda0c3212fb" />
+
 
 2. Encuentre la representación gráfica y secuencial (a mano).
 <img width="1442" height="1229" alt="image" src="https://github.com/user-attachments/assets/89073635-2828-4488-b3ed-03adf264a7d6" />
@@ -33,3 +34,11 @@ Teniendo el sistema h[n] = {5,6,0,8,3,4} y la señal x[n] = {1,0,7,6,7,3,6,2,2,9
          plt.show()
    <img width="850" height="393" alt="image" src="https://github.com/user-attachments/assets/5181128b-8ba7-4243-a017-2919f6c3f31b" />
    
+
+
+
+
+
+### Parte B:
+
+### Parte C:
