@@ -109,13 +109,13 @@ Se obtuvieron los datos estadísticos de la señal:
        print("Valor mínimo:", round(np.min(senal), 4), "mV")
        print("Valor máximo:", round(np.max(senal), 4), "mV")
        
-=== DATOS ESTADÍSTICOS DE LA SEÑAL ===
+=== DATOS ESTADÍSTICOS DE LA SEÑAL ===  
 Media: 159.1661 mV  
 Mediana: 92.154 mV  
 Desviación estándar: 379.9427 mV  
 Valor mínimo: -1379.9736 mV  
 Valor máximo: 1484.7332 mV  
-Después se hizo la convolución, correlación y transformada de Fourier 
+Después se hizo la convolución
 
 
 
