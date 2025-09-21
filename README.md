@@ -100,6 +100,21 @@ Se descargó un EOG en .txt del generador para graficarlo en colab y a su vez ob
        plt.show()
 <img width="1026" height="393" alt="image" src="https://github.com/user-attachments/assets/f9d9162d-4f61-427b-bdba-871281fda9a6" />
 
+Se obtuvieron los datos estadisticos de la señal:
+
+       print("=== DATOS ESTADÍSTICOS DE LA SEÑAL ===")
+       print("Media:", round(np.mean(senal), 4), "mV")
+       print("Mediana:", round(np.median(senal), 4), "mV")
+       print("Desviación estándar:", round(np.std(senal), 4), "mV")
+       print("Valor mínimo:", round(np.min(senal), 4), "mV")
+       print("Valor máximo:", round(np.max(senal), 4), "mV")
+       
+=== DATOS ESTADÍSTICOS DE LA SEÑAL ===
+Media: 159.1661 mV
+Mediana: 92.154 mV
+Desviación estándar: 379.9427 mV
+Valor mínimo: -1379.9736 mV
+Valor máximo: 1484.7332 mV
 
 
 
