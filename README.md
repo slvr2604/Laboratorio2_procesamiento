@@ -1,7 +1,7 @@
 # Laboratorio2_procesamiento
-Lina María Cortés Almonacid
-María Alejandra Torres Cardenas
-Silvia Lorena Vargas Rueda
+Lina María Cortés Almonacid  
+María Alejandra Torres Cardenas  
+Silvia Lorena Vargas Rueda  
 
 ## Convolución, correlación y transformada de Fourier
 ### Parte A:
