@@ -152,6 +152,18 @@ Acá ya se se quitó la media de la señal para que quede centrada en cero, se n
       plt.show()
 <img width="1017" height="393" alt="image" src="https://github.com/user-attachments/assets/a513c844-02a0-42cd-a7ff-cb3122bedd83" />
 
+**Clasificación de la señal**  
+La señal electrooculográfica (EOG) puede clasificarse como **aleatoria**, ya que se trata de una señal fisiológica influenciada por múltiples factores biológicos y por la presencia inevitable de ruido. Esto hace que no sea posible predecirla de manera exacta en cada instante de tiempo.  
+
+En cuanto a su periodicidad, la señal es **aperiódica**, dado que no presenta un patrón repetitivo fijo a lo largo del tiempo. Los movimientos oculares son variables y dependen de estímulos externos o del comportamiento espontáneo de la persona, por lo cual no siguen un ciclo estable.  
+
+Finalmente, la señal es **analógica**, ya que se origina como una variación continua de potencial eléctrico en la superficie de la piel alrededor de los ojos. Sin embargo, en este trabajo se utiliza su versión digitalizada, la cual permite procesarla y analizarla mediante herramientas computacionales.
+
+
+
+
+
+
 
 
 
