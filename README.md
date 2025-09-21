@@ -109,13 +109,48 @@ Se obtuvieron los datos estadísticos de la señal:
        print("Valor mínimo:", round(np.min(senal), 4), "mV")
        print("Valor máximo:", round(np.max(senal), 4), "mV")
        
-=== DATOS ESTADÍSTICOS DE LA SEÑAL ===  
+**=== DATOS ESTADÍSTICOS DE LA SEÑAL ===**  
 Media: 159.1661 mV  
 Mediana: 92.154 mV  
 Desviación estándar: 379.9427 mV  
 Valor mínimo: -1379.9736 mV  
 Valor máximo: 1484.7332 mV  
-Después se hizo la convolución
+
+**Convolución**  
+Para la convolución fue necesario poner filtro, ya que inicialmente se veía así:
+<img width="1021" height="393" alt="image" src="https://github.com/user-attachments/assets/ea83ab83-717d-4440-8322-5eb2fe416bf4" />
+
+Se aplicó un filtro de media móvil con una ventana de 50 muestras. Dado que la frecuencia de muestreo es de 1200 Hz, cada muestra corresponde a aproximadamente 0,83 ms. Por lo tanto, una ventana de 50 muestras equivale a un intervalo temporal de alrededor de 42 ms. Este filtro actúa como un suavizador, reduciendo las variaciones rápidas o de alta frecuencia de la señal y resaltando las tendencias más lentas y relevantes para el análisis. Se sabe que equivale a 42 ms al dividir el tamaño de la ventana (50) entre la frecuencia de muestrreo (1200 Hz).
+
+<img width="1017" height="393" alt="image" src="https://github.com/user-attachments/assets/33beeb2e-808b-4867-a8e8-70b3f7415faf" />
+
+**Correlación**  
+Para esta parte se hizo una autocorrelación, ya que solo teniamos una señal y no se podia hacer una correlación cruzada, inicalmente la gráfica se veía así:
+
+      auto_corr = np.correlate(senal, senal, mode='full')
+      
+      plt.plot(auto_corr)
+      plt.title("Autocorrelación (sin normalizar ni centrar)")
+      plt.xlabel("Desfase [muestras]")
+      plt.ylabel("Correlación")
+      plt.show()
+
+<img width="578" height="455" alt="image" src="https://github.com/user-attachments/assets/c887f41a-79f8-4c71-8dfc-cee9e5e66ea1" />
+
+Acá ya se se quitó la media de la señal para que quede centrada en cero, se normaliza para que el valor máximo sea 1 y sea más fácil de comparar, y se pasa el eje de desfases a segundos dividiendo entre la frecuencia de muestreo en lugar de dejarlo en número de muestras.  
+
+      auto_corr = np.correlate(senal - np.mean(senal), senal - np.mean(senal), mode='full')
+      auto_corr = auto_corr / np.max(auto_corr)
+      lags = np.arange(-len(senal)+1, len(senal)) / fs
+
+      plt.figure(figsize=(12,4))
+      plt.plot(lags, auto_corr, color="purple")
+      plt.title("Autocorrelación de la señal")
+      plt.xlabel("Desfase [s]")
+      plt.ylabel("Correlación normalizada")
+      plt.grid()
+      plt.show()
+<img width="1017" height="393" alt="image" src="https://github.com/user-attachments/assets/a513c844-02a0-42cd-a7ff-cb3122bedd83" />
 
 
 
