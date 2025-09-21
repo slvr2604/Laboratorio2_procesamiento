@@ -80,9 +80,12 @@ Los resultados fueron exactamente iguales en ambos casos, tanto en los valores d
 ### Parte B:
 
 ### Parte C:
-Un electrooculograma (EOG) es una prueba médica utilizada para medir la actividad eléctrica generada por los movimientos oculares, registra la diferencia de potencial eléctrico entre la córnea (positiva) y la retina (negativa), formando un dipolo eléctrico. Se colocan pequeños electrodos cerca de los ojos para captar los cambios de voltaje que ocurren cuando los ojos se mueven. Es especialmente útil en oftalmología y neurología para evaluar el funcionamiento de ciertas estructuras del ojo y detectar posibles alteraciones, la prueba dura unos 45 minutos e incluye fases de adaptación a la luz y oscuridad.
+Un electrooculograma (EOG) es una prueba médica utilizada para medir la actividad eléctrica generada por los movimientos oculares, registra la diferencia de potencial eléctrico entre la córnea (positiva) y la retina (negativa), formando un dipolo eléctrico. Se colocan pequeños electrodos cerca de los ojos para captar los cambios de voltaje que ocurren cuando los ojos se mueven. Es especialmente útil en oftalmología y neurología para evaluar el funcionamiento de ciertas estructuras del ojo y detectar posibles alteraciones, la prueba dura unos 45 minutos e incluye fases de adaptación a la luz y oscuridad.  
 
-En cuanto a su frecuencia, el EOG se considera una señal de baja frecuencia, con un rango típico entre 0.1 Hz y 30 Hz, según el tipo de movimiento ocular. Los movimientos lentos como la fijación o el seguimiento generan señales entre 0.1 Hz y 10 Hz, mientras que los movimientos rápidos como los sacádicos pueden alcanzar hasta 30 Hz. Este rango permite registrar adecuadamente la actividad ocular sin interferencias de señales de mayor frecuencia como las del EEG o EMG. Los sistemas de registro suelen aplicar filtros pasa banda en ese mismo rango para optimizar la calidad de la señal.
+En cuanto a su frecuencia, el EOG se considera una señal de baja frecuencia, con un rango típico entre 0.1 Hz y 30 Hz, según el tipo de movimiento ocular. Los movimientos lentos como la fijación o el seguimiento generan señales entre 0.1 Hz y 10 Hz, mientras que los movimientos rápidos como los sacádicos pueden alcanzar hasta 30 Hz. Este rango permite registrar adecuadamente la actividad ocular sin interferencias de señales de mayor frecuencia como las del EEG o EMG, también a veces el ojo experimenta temblores que pueden alcanzar oscilaciones de alta frecuencia (30-150 Hz) y muy baja amplitud.  
+
+
+
 
 
 ### Referencias:
