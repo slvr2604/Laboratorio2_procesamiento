@@ -73,7 +73,8 @@ Teniendo el sistema h[n] = {5,6,0,7,4,8} y la señal x[n] = {1,0,1,1,3,2,1,5,9,7
        plt.grid()
        plt.show()
 
-<img width="1159" height="775" alt="image" src="https://github.com/user-attachments/assets/11f2ce48-3ce9-42a5-bdb3-c3d64fc8b5fd" />
+<img width="571" height="455" alt="image" src="https://github.com/user-attachments/assets/e269c405-a4fc-4c6b-972a-25f58aaa97be" />
+
 
 ### Parte B:
 
