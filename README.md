@@ -44,10 +44,18 @@ Teniendo el sistema h[n] = {5,6,0,8,3,4} y la señal x[n] = {1,0,7,6,7,3,6,2,2,9
 **Silvia..**
 
 **Alejandra Torres**
+
 Teniendo el sistema h[n] = {5,6,0,7,4,8} y la señal x[n] = {1,0,1,1,3,2,1,5,9,7}:  
 1. Encuentre la señal 𝑦[𝑛] resultante de la convolución usando sumatorias (a mano).
 <img width="1488" height="1238" alt="image" src="https://github.com/user-attachments/assets/91ae1dff-e385-4e28-ba72-c7ce268aebe7" />
 2. Encuentre la representación gráfica y secuencial (a mano).
+<img width="1159" height="775" alt="image" src="https://github.com/user-attachments/assets/25e2b891-aa53-4556-af6d-a24d76f320ac" />
+3. Encuentre la señal 𝑦[𝑛] resultante de la convolución usando Python.
+   
+        h = [5,6,0,0,7,4,8]
+        x = [1,0,1,1,3,2,1,5,9,7]
+        y = np.convolve(x, h)
+       print("y[n] =", y)
 
 ### Parte B:
 
