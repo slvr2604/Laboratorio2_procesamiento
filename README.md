@@ -61,7 +61,8 @@ Teniendo el sistema h[n] = {5,6,0,8,3,4} y la señal x[n] = {1,0,7,6,7,3,6,2,2,9
          plt.show()
 
 
-   <img width="989" height="790" alt="image" src="https://github.com/user-attachments/assets/c4d69630-c63e-42f2-80f1-e7f6a5071003" />
+   <img width="989" height="790" alt="image" src="https://github.com/user-attachments/assets/feaabc8a-69e7-461e-8afd-6ba86a7ae921" />
+
 
 Se confirma que el procedimiento que fue a mano, junto con el programado es correcto y concuerda.  
    
@@ -123,7 +124,9 @@ plt.tight_layout()
 plt.show()
 ```
 Donde `fig, axs = plt.subplots(3, 1, figsize=(10, 8), sharex=False)` será de utilidad para dar un tamaño general a las tres gráficas para que al graficarlas se observen así: 
-<img width="989" height="790" alt="image" src="https://github.com/user-attachments/assets/955752fb-a2b0-46bc-9af9-661ccd58e516" />
+
+<img width="989" height="790" alt="image" src="https://github.com/user-attachments/assets/a2321147-5003-43ba-9a46-76af3456ba16" />
+
 y `plt.subplot(3, 1, 1)` es la forma clásica de dividir una sola figura en una cuadrícula de subgráficas, donde el primer 3 respresenta el número de filas, el primer 1 será el número de columnas, y el segundo 1 será el índice de la gráfica que será usada.
  Y finalmente observaremos la relación correcta entre la convolución realizada a mano con el método enseñado y la convolución realizada a través de Python.
  
@@ -188,7 +191,8 @@ Teniendo el sistema h[n] = {5,6,0,7,4,8} y la señal x[n] = {1,0,1,1,3,2,1,5,9,7
 
        print("La señal resultante y[n] es:", y)
 
-<img width="989" height="790" alt="image" src="https://github.com/user-attachments/assets/8dde492d-a75b-4531-a2af-6367a66e4ff2" />
+<img width="989" height="790" alt="image" src="https://github.com/user-attachments/assets/e874356f-167e-47db-9fc3-6a526428df28" />
+
 
 Los resultados fueron exactamente iguales en ambos casos, tanto en los valores de y[n] como en la gráfica obtenida, confirmando que el procedimiento manual y el programado son correctos.
 
