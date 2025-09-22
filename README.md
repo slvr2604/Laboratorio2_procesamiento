@@ -200,8 +200,15 @@ Para la parte B será necesario calcular la correlación cruzada de dos señales
 `x1[nTs] = cos(2π100nTs) para 0 ≤ n < 9`  y `x2[nTs] = sin(2π100nTs) para 0 ≤ n <9` y para `Ts = 1.25ms`
 Comenzaremos haciendo el cálculo de la correlación cruzada a mano que nos dará lo siguiente: 
 
-Y luego haremos la gráfica.
+<img width="885" height="1301" alt="image" src="https://github.com/user-attachments/assets/bcb20adc-c909-4702-bfe1-f4ea53648f6e" />
 
+Y a partir de las fórmulas obtenidas obtendremos nuestra tabla de retardo.
+
+<img width="553" height="1551" alt="image" src="https://github.com/user-attachments/assets/7976f0ae-347b-4161-b43b-ee17d9a1d5ea" />
+
+Que nos permitirá hacer la gráfica de la correlación `r(x1x2)`
+
+<img width="553" height="1551" alt="image" src="https://github.com/user-attachments/assets/0c064ef6-dae5-4f9c-bb26-c6e00df38d41" />
 
 Y procederemos con el código en Python para verificar que lo hecho a mano es correcto: 
 En primer lugar se declaran las variables y las señales que serán correlacionadas.
