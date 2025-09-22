@@ -318,6 +318,8 @@ Se aplicó un filtro de media móvil con una ventana de 50 muestras. Dado que la
 
 <img width="1017" height="393" alt="image" src="https://github.com/user-attachments/assets/33beeb2e-808b-4867-a8e8-70b3f7415faf" />
 
+La señal presenta picos y valles periódicos, lo que sugiere la presencia de movimientos oculares repetitivos, este procesamiento permite resaltar los componentes lentos de la señal, como los desplazamientos oculares sostenidos, y facilita la interpretación visual.  
+
 **Correlación**  
 Para esta parte se hizo una autocorrelación, ya que solo teniamos una señal y no se podia hacer una correlación cruzada, inicalmente la gráfica se veía así:
 
