@@ -43,14 +43,62 @@ Teniendo el sistema h[n] = {5,6,0,8,3,4} y la señal x[n] = {1,0,7,6,7,3,6,2,2,9
 
 **Silvia Vargas**
 Primero hacemos el cálculo de la convolución a mano de la señal `y(n) = x(n) + h(n)` a través del método enseñado, teniendo en cuenta que `x(n) = {1,0,5,4,2,8,4,0,8,8}` y que `h(n) = {5,6,0,0,8,5,6}`, la cual quedaría de la siguiente forma:
-
+<img width="1280" height="748" alt="image" src="https://github.com/user-attachments/assets/2293c06b-8583-4c6d-99a1-9f0557905734" />
 
 Y al ser graficada, nos dará una gráfica de la siguiente forma:
 <img width="816" height="1019" alt="image" src="https://github.com/user-attachments/assets/506d05a0-1000-410b-a6ef-968d3ce829bb" />
 
+Y una vez hecho el proceso a mano, procederemos a verificarlo a través del código de Python:
 
+```
+#Definimos x(n) y h(n).
+x = np.array([1,0,5,4,2,8,4,0,8,8])
+h = np.array([5,6,0,0,8,5,6])
 
+y = np.convolve(x,h)
+print("y(n) = ", y)
+```
+**Y nos dará que `y (n) = {5, 6, 25, 50, 42, 57, 114, 81, 106, 186, 132, 68, 88, 104, 88, 48}`, la cual coincide con la señal convolucionada calculada anteriormente.
+Y procederemos con el rango de índices para las gráficas.
+```
+#Generamos el rango de índices.
+x_n = np.arange(len(x))
+h_n = np.arange(len(h))
+y_n = np.arange(len(y))
+```
+Y una vez hecho, podremos generar las tres gráficas, de `x(n)`, `h,(n)` y de `y(n)`.
+```
+fig, axs = plt.subplots(3, 1, figsize=(10, 8), sharex=False)
 
+# Gráfica de x(n)
+plt.subplot(3, 1, 1)
+plt.stem(x_n, x)
+plt.title("x(n) = Código Silvia")
+plt.ylabel("x[n]")
+plt.grid(True)
+
+# Gráfica de h(n)
+plt.subplot(3, 1, 2)
+plt.stem(h_n, h)
+plt.title("h(n) = Código Silvia")
+plt.ylabel("h[n]")
+plt.grid(True)
+
+# Gráfica de y(n)
+plt.subplot(3, 1, 3)
+plt.stem(y_n, y)
+plt.title("y(n) = Código Silvia")
+plt.xlabel("n")
+plt.ylabel("y[n]")
+plt.grid(True)
+
+plt.tight_layout()
+plt.show()
+```
+Donde `fig, axs = plt.subplots(3, 1, figsize=(10, 8), sharex=False)` será de utilidad para dar un tamaño general a las tres gráficas para que al graficarlas se observen así: 
+<img width="989" height="790" alt="image" src="https://github.com/user-attachments/assets/955752fb-a2b0-46bc-9af9-661ccd58e516" />
+y `plt.subplot(3, 1, 1)` es la forma clásica de dividir una sola figura en una cuadrícula de subgráficas, donde el primer 3 respresenta el número de filas, el primer 1 será el número de columnas, y el segundo 1 será el índice de la gráfica que será usada.
+ Y finalmente observaremos la relación correcta entre la convolución realizada a mano con el método enseñado y la convolución realizada a través de Python.
 **Alejandra Torres**
 
 Teniendo el sistema h[n] = {5,6,0,7,4,8} y la señal x[n] = {1,0,1,1,3,2,1,5,9,7}:  
