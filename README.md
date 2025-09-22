@@ -272,7 +272,7 @@ Observamos que su máximo principal alrededor de k ≈ +2, con un valor cercano 
 
 Finalmente podremos interpretar que la correlación cruzada es útil en el procesamiento digital de señales para la detección de una señal conocida dentro de ruido, para estimar retrasos entre dos señales cuando son medidas con dos sensores distintos, para analizar la similitud entre canales (confirmando si dos señales fueron capturadas con la misma fuente o si son filtradas una de la otra) y para analizar sistemas lineales (estudiando la respuesta de un sistema probando con señales y correlacionando la salida con la entrada).
 
-### Parte C: parte a 
+### Parte C:  
  
 Un electroculograma (EOG) es una prueba médica utilizada para medir la actividad eléctrica generada por los movimientos oculares, registra la diferencia de potencial eléctrico entre la córnea (positiva) y la retina (negativa), formando un dipolo eléctrico. Se colocan pequeños electrodos cerca de los ojos para captar los cambios de voltaje que ocurren cuando los ojos se mueven. Es especialmente útil en oftalmología y neurología para evaluar el funcionamiento de ciertas estructuras del ojo y detectar posibles alteraciones, la prueba dura unos 45 minutos e incluye fases de adaptación a la luz y oscuridad.  
 
@@ -344,14 +344,17 @@ Acá ya se se quitó la media de la señal para que quede centrada en cero, se n
       plt.ylabel("Correlación normalizada")
       plt.grid()
       plt.show()
-<img width="1017" height="393" alt="image" src="https://github.com/user-attachments/assets/a513c844-02a0-42cd-a7ff-cb3122bedd83" />
+
+<img width="1012" height="393" alt="image" src="https://github.com/user-attachments/assets/55b7b64c-9629-4ae5-90e3-c8afe6bf0072" />
+
 
 **Clasificación de la señal**  
-El EOG puede clasificarse como **aleatorio**, ya que se trata de una señal fisiológica influenciada por múltiples factores biológicos y por la presencia inevitable de ruido. Esto hace que no sea posible predecirla de manera exacta en cada instante de tiempo.  
+Determinística vs. Aleatoria: La señal EOG es **aleatoria**, ya que depende del movimiento ocular voluntario e involuntario, el cual no puede predecirse con exactitud.  
 
-En cuanto a su periodicidad, la señal es **aperiódica**, dado que no presenta un patrón repetitivo fijo a lo largo del tiempo. Los movimientos oculares son variables y dependen de estímulos externos o del comportamiento espontáneo de la persona, por lo cual no siguen un ciclo estable.  
+Periódica vs. Aperiódica: Es **aperiódica**, ya que los movimientos oculares no siguen un patrón repetitivo constante. Aunque ciertos estímulos pueden inducir patrones, no se considera periódica en general.  
 
-Finalmente, la señal es **analógica**, ya que se origina como una variación continua de potencial eléctrico en la superficie de la piel alrededor de los ojos. Sin embargo, en este trabajo se utiliza su versión digitalizada, la cual permite procesarla y analizarla mediante herramientas computacionales.
+Analógica vs. Digital: Originalmente, la señal EOG es analógica, ya que se genera como una variación continua de voltaje. Sin embargo, al ser digitalizada (como se indica en el punto 2 del laboratorio), se convierte en una señal **digital** para su procesamiento.  
+
 
 ## Parte b 
 
@@ -420,8 +423,7 @@ Esto muestra claramente que la señal es predominantemente de baja frecuencia, c
 - Oppenheim, A. V., Willsky, A. S., & Nawab, S. H. (1997). Signals and Systems (2nd ed.). Prentice Hall. https://archive.org/details/OppenheimSignalsAndSystems2ndEd
 - Tech Lib. (s.f.). Frecuencia de Nyquist - Definición y explicación. Recuperado el 21 de septiembre de 2025, de https://techlib.net/techedu/frecuencia-de-nyquist/
 - Thai, J. (2025, 20 de mayo). Explicación de la tasa de Nyquist y el filtro antialiasing. ErdosMiller. https://info.erdosmiller.com/es/blog/explicaci%C3%B3n-de-la-tasa-de-nyquist-y-el-filtro-antialiasing
-- Bounchaleun, A. (2019). An Elementary Introduction to Fast Fourier Transform Algorithms. University of Chicago, Mathematics Department.
-- Recuperado de https://math.uchicago.edu/~may/REU2019/REUPapers/Bounchaleun.pdf
+- Bounchaleun, A. (2019). An Elementary Introduction to Fast Fourier Transform Algorithms. University of Chicago, Mathematics Department. Recuperado de https://math.uchicago.edu/~may/REU2019/REUPapers/Bounchaleun.pdf
 
 - Solomon Jr, O. M. (1984). PSD computations using Welch’s method. Sandia National Laboratories.
 Recuperado de https://www.osti.gov/servlets/purl/5688766
