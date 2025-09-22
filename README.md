@@ -61,8 +61,7 @@ Teniendo el sistema h[n] = {5,6,0,8,3,4} y la señal x[n] = {1,0,7,6,7,3,6,2,2,9
          plt.show()
 
 
-   <img width="989" height="790" alt="image" src="https://github.com/user-attachments/assets/feaabc8a-69e7-461e-8afd-6ba86a7ae921" />
-
+<img width="989" height="790" alt="image" src="https://github.com/user-attachments/assets/2102907c-f18d-4778-86b5-ce23430ae0ee" />
 
 Se confirma que el procedimiento que fue a mano, junto con el programado es correcto y concuerda.  
    
