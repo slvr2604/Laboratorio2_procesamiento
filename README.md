@@ -193,9 +193,11 @@ plt.ylabel("r (x1x2)")
 plt.grid(True)
 plt.show()
 ```
+<img width="565" height="455" alt="image" src="https://github.com/user-attachments/assets/94efe047-9294-4200-8f44-7cedea577551" />
+Y podremos observar que tiene una secuencia discreta y simétrica, ya que tiene valores positivos a la derecha de `k = 0` y hacia la izquierda estos son negativos. Esta señal a su vez alterna valores positivos y negativos, lo que nos muestra una especie de onda.
+Observamos que su máximo principal alrededor de k ≈ +2, con un valor cercano a 3.4, y su mínimo principal alrededor de k ≈ –2, con un valor cercano a –3.3. Lo que nos puede indicar que la mayor similitud entre ambas ondas se da cuando la señal x2 se desplaza aproximadamente 2 muestras hacia la derecha con respecto a x1. Es decir que la gráfica confirma que x1 y x2 son la misma frecuencia pero con un desfase de 90°, y la correlación cruzada capta ese desfase como el pico positivo en k=+2 y con el negativo en k=–2.
 
-
-Tendremos en cuenta que es útil en el procesamiento digital de señales para la detección de una señal conocida dentro de ruido, para estimar retrasos entre dos señales medidas con dos sensores distintos, para analizar la similitud entre canales (confirmando si dos señales fueron capturadas con la misma fuente o si son filtradas una de la otra) y para analizar sistemas lineales (estudiando la respuesta de un sistema probando con señales y correlacionando la salida con la entrada).
+Finalmente podremos interpretar que la correlación cruzada es útil en el procesamiento digital de señales para la detección de una señal conocida dentro de ruido, para estimar retrasos entre dos señales cuando son medidas con dos sensores distintos, para analizar la similitud entre canales (confirmando si dos señales fueron capturadas con la misma fuente o si son filtradas una de la otra) y para analizar sistemas lineales (estudiando la respuesta de un sistema probando con señales y correlacionando la salida con la entrada).
 
 ### Parte C:
 Un electroculograma (EOG) es una prueba médica utilizada para medir la actividad eléctrica generada por los movimientos oculares, registra la diferencia de potencial eléctrico entre la córnea (positiva) y la retina (negativa), formando un dipolo eléctrico. Se colocan pequeños electrodos cerca de los ojos para captar los cambios de voltaje que ocurren cuando los ojos se mueven. Es especialmente útil en oftalmología y neurología para evaluar el funcionamiento de ciertas estructuras del ojo y detectar posibles alteraciones, la prueba dura unos 45 minutos e incluye fases de adaptación a la luz y oscuridad.  
