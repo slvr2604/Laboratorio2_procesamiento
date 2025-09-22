@@ -30,20 +30,44 @@ Teniendo el sistema h[n] = {5,6,0,8,3,4} y la señal x[n] = {1,0,7,6,7,3,6,2,2,9
 
 4. Encuentre la representación gráfica y secuencial usando Python.
 
-         plt.figure(figsize=(10, 4))
-         plt.stem(y)
-         plt.title('Señal Resultante y[n]')
-         plt.xlabel('Índice n')
-         plt.ylabel('Amplitud')
+         x = np.array([1,0,7,6,7,3,6,2,2,9])
+         h = np.array([5,6,0,0,8,3,4])
+
+         fig, axs = plt.subplots(3, 1, figsize=(10, 8), sharex=False)  
+
+         Gráfica de x(n)
+         plt.subplot(3, 1, 1)
+         plt.stem(x_n, x)
+         plt.title("x (n) = Lina Cortés")
+         plt.ylabel("x [n]")
          plt.grid(True)
+
+         Gráfica de h(n) 
+         plt.subplot(3, 1, 2)
+         plt.stem(h_n, h)
+         plt.title("h (n) =  Lina Cortés")
+         plt.ylabel("h [n]")
+         plt.grid(True)
+
+         Gráfica de y(n)
+         plt.subplot(3, 1, 3)
+         plt.stem(y_n, y)
+         plt.title("y(n) = Lina Cortés")
+         plt.xlabel("n")
+         plt.ylabel("y [n]")
+         plt.grid(True)
+
+         plt.tight_layout()
          plt.show()
+
+
    <img width="989" height="790" alt="image" src="https://github.com/user-attachments/assets/c4d69630-c63e-42f2-80f1-e7f6a5071003" />
 
-   <img width="850" height="393" alt="image" src="https://github.com/user-attachments/assets/5181128b-8ba7-4243-a017-2919f6c3f31b" />
+Se confirma que el procedimiento que fue a mano, junto con el programado es correcto y concuerda.  
    
 
 
-**Silvia Vargas**
+**Silvia Vargas**  
 
 Primero hacemos el cálculo de la convolución a mano de la señal `y(n) = x(n) + h(n)` a través del método enseñado, teniendo en cuenta que `x(n) = {1,0,5,4,2,8,4,0,8,8}` y que `h(n) = {5,6,0,0,8,5,6}`, la cual quedaría de la siguiente forma:
 <img width="1280" height="748" alt="image" src="https://github.com/user-attachments/assets/2293c06b-8583-4c6d-99a1-9f0557905734" />
