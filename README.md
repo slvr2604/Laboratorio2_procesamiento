@@ -43,7 +43,7 @@ Teniendo el sistema h[n] = {5,6,0,8,3,4} y la señal x[n] = {1,0,7,6,7,3,6,2,2,9
 
 **Silvia Vargas**
 Primero hacemos el cálculo de la convolución a mano de la señal `y(n) = x(n) + h(n)` a través del método enseñado, teniendo en cuenta que `x(n) = {1,0,5,4,2,8,4,0,8,8}` y que `h(n) = {5,6,0,0,8,5,6}`, la cual quedaría de la siguiente forma:
-
+<img width="850" height="393" alt="image" src="https://github.com/slvr2604/Laboratorio2_procesamiento/blob/e4217e10f43f1cad3cb2ffa38ee1826ebf20fe53/Convoluci%C3%B3n%20Silvia.jpeg" />
 y nos dará una gráfica de la siguiente forma:
 
 
