@@ -340,6 +340,8 @@ En cuanto a su periodicidad, la señal es **aperiódica**, dado que no presenta 
 
 Finalmente, la señal es **analógica**, ya que se origina como una variación continua de potencial eléctrico en la superficie de la piel alrededor de los ojos. Sin embargo, en este trabajo se utiliza su versión digitalizada, la cual permite procesarla y analizarla mediante herramientas computacionales.
 
+
+
 Para hallar la transformada de fourier de la señal, la densidad espectral de potencia, y los datos estadisticos se utilizo el siguiete codigo:
 
     fft_resultado = np.fft.fft(senal_mV - np.mean(senal_mV))
@@ -405,3 +407,12 @@ Esto muestra claramente que la señal es predominantemente de baja frecuencia, c
 - Oppenheim, A. V., Willsky, A. S., & Nawab, S. H. (1997). Signals and Systems (2nd ed.). Prentice Hall. https://archive.org/details/OppenheimSignalsAndSystems2ndEd
 - Tech Lib. (s.f.). Frecuencia de Nyquist - Definición y explicación. Recuperado el 21 de septiembre de 2025, de https://techlib.net/techedu/frecuencia-de-nyquist/
 - Thai, J. (2025, 20 de mayo). Explicación de la tasa de Nyquist y el filtro antialiasing. ErdosMiller. https://info.erdosmiller.com/es/blog/explicaci%C3%B3n-de-la-tasa-de-nyquist-y-el-filtro-antialiasing
+- Cooley, J. W., & Tukey, J. W. (1965). An algorithm for the machine calculation of complex Fourier series. Mathematics of Computation, 19(90), 297–301. 
+Department of Computer Science
+-Welch, P. (1967). The use of fast Fourier transform for the estimation of power spectra: A method based on time averaging over short, modified periodograms. (Ver explicaiones y recursos). 
+-Oppenheim, A. V., & Willsky, A. S. (1996). Signals and Systems. Prentice Hall. 
+Materias UBA
+-Proakis, J. G., & Manolakis, D. G. (1996). Digital Signal Processing: Principles, Algorithms and Applications. Prentice Hall. 
+ACM Digital Library
+-Belkhiria, C., et al. (2022). EOG-Based Human–Computer Interface: 2000–2020 Review. Sensors / review article. 
+PMC
