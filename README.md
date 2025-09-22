@@ -52,7 +52,7 @@ Teniendo el sistema h[n] = {5,6,0,8,3,4} y la señal x[n] = {1,0,7,6,7,3,6,2,2,9
          Gráfica de y(n)
          plt.subplot(3, 1, 3)
          plt.stem(y_n, y)
-         plt.title("y(n) = Convolución y(n)")
+         plt.title("y(n) = Convolución x(n) + y(n)")
          plt.xlabel("n")
          plt.ylabel("y [n]")
          plt.grid(True)
@@ -115,7 +115,7 @@ plt.grid(True)
 # Gráfica de y(n)
 plt.subplot(3, 1, 3)
 plt.stem(y_n, y)
-plt.title("y(n) = Convolución y(n)")
+plt.title("y(n) = Convolución x(n) + h(n)")
 plt.xlabel("n")
 plt.ylabel("y[n]")
 plt.grid(True)
@@ -125,7 +125,8 @@ plt.show()
 ```
 Donde `fig, axs = plt.subplots(3, 1, figsize=(10, 8), sharex=False)` será de utilidad para dar un tamaño general a las tres gráficas para que al graficarlas se observen así: 
 
-<img width="989" height="790" alt="image" src="https://github.com/user-attachments/assets/a2321147-5003-43ba-9a46-76af3456ba16" />
+<img width="989" height="790" alt="image" src="https://github.com/user-attachments/assets/e59d9d54-9204-4729-9ac0-a79769502db7" />
+
 
 y `plt.subplot(3, 1, 1)` es la forma clásica de dividir una sola figura en una cuadrícula de subgráficas, donde el primer 3 respresenta el número de filas, el primer 1 será el número de columnas, y el segundo 1 será el índice de la gráfica que será usada.
  Y finalmente observaremos la relación correcta entre la convolución realizada a mano con el método enseñado y la convolución realizada a través de Python.
@@ -181,7 +182,7 @@ Teniendo el sistema h[n] = {5,6,0,7,4,8} y la señal x[n] = {1,0,1,1,3,2,1,5,9,7
 
        # Grafica y(n)
        axs[2].stem(y_n, y)
-       axs[2].set_title("y(n) = Convolución y(n)")
+       axs[2].set_title("y(n) = Convolución x(n) +h(n)")
        axs[2].set_xlabel("n")
        axs[2].set_ylabel("y[n]")
        axs[2].grid(True)
@@ -191,7 +192,8 @@ Teniendo el sistema h[n] = {5,6,0,7,4,8} y la señal x[n] = {1,0,1,1,3,2,1,5,9,7
 
        print("La señal resultante y[n] es:", y)
 
-<img width="989" height="790" alt="image" src="https://github.com/user-attachments/assets/e874356f-167e-47db-9fc3-6a526428df28" />
+<img width="989" height="790" alt="image" src="https://github.com/user-attachments/assets/cbc98e8b-bea1-4918-93d7-643944cc7896" />
+
 
 
 Los resultados fueron exactamente iguales en ambos casos, tanto en los valores de y[n] como en la gráfica obtenida, confirmando que el procedimiento manual y el programado son correctos.
