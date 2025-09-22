@@ -171,7 +171,7 @@ En cuanto a su periodicidad, la señal es **aperiódica**, dado que no presenta 
 Finalmente, la señal es **analógica**, ya que se origina como una variación continua de potencial eléctrico en la superficie de la piel alrededor de los ojos. Sin embargo, en este trabajo se utiliza su versión digitalizada, la cual permite procesarla y analizarla mediante herramientas computacionales.
 
 
-n
+
 
 
 
