@@ -213,7 +213,7 @@ Y a partir de las fórmulas obtenidas obtendremos nuestra tabla de retardo.
 
 Que nos permitirá hacer la gráfica de la correlación `r(x1x2)`
 
-<img width="553" height="1551" alt="image" src="https://github.com/user-attachments/assets/0c064ef6-dae5-4f9c-bb26-c6e00df38d41" />
+<img width="1600" height="914" alt="image" src="https://github.com/user-attachments/assets/b085ce67-f094-4fcf-b6d3-dd3b846f4c16" />
 
 Y procederemos con el código en Python para verificar que lo hecho a mano es correcto: 
 En primer lugar se declaran las variables y las señales que serán correlacionadas.
