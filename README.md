@@ -261,7 +261,9 @@ Observamos que su máximo principal alrededor de k ≈ +2, con un valor cercano 
 Finalmente podremos interpretar que la correlación cruzada es útil en el procesamiento digital de señales para la detección de una señal conocida dentro de ruido, para estimar retrasos entre dos señales cuando son medidas con dos sensores distintos, para analizar la similitud entre canales (confirmando si dos señales fueron capturadas con la misma fuente o si son filtradas una de la otra) y para analizar sistemas lineales (estudiando la respuesta de un sistema probando con señales y correlacionando la salida con la entrada).
 
 ### Parte C:
+
  ##Parte a
+ 
 Un electroculograma (EOG) es una prueba médica utilizada para medir la actividad eléctrica generada por los movimientos oculares, registra la diferencia de potencial eléctrico entre la córnea (positiva) y la retina (negativa), formando un dipolo eléctrico. Se colocan pequeños electrodos cerca de los ojos para captar los cambios de voltaje que ocurren cuando los ojos se mueven. Es especialmente útil en oftalmología y neurología para evaluar el funcionamiento de ciertas estructuras del ojo y detectar posibles alteraciones, la prueba dura unos 45 minutos e incluye fases de adaptación a la luz y oscuridad.  
 
 En cuanto a su frecuencia, el EOG se considera una señal de baja frecuencia, con un rango típico entre 0.1 Hz y 30 Hz, según el tipo de movimiento ocular. Los movimientos lentos como la fijación o el seguimiento generan señales entre 0.1 Hz y 10 Hz, mientras que los movimientos rápidos como los sacádicos pueden alcanzar hasta 30 Hz. Este rango permite registrar adecuadamente la actividad ocular sin interferencias de señales de mayor frecuencia como las del EEG o EMG, también a veces el ojo experimenta temblores que pueden alcanzar oscilaciones de alta frecuencia (30-150 Hz) y muy baja amplitud. 
@@ -341,7 +343,7 @@ En cuanto a su periodicidad, la señal es **aperiódica**, dado que no presenta 
 
 Finalmente, la señal es **analógica**, ya que se origina como una variación continua de potencial eléctrico en la superficie de la piel alrededor de los ojos. Sin embargo, en este trabajo se utiliza su versión digitalizada, la cual permite procesarla y analizarla mediante herramientas computacionales.
 
-## Prte b 
+## Parte b 
 
 Para hallar la transformada de fourier de la señal, la densidad espectral de potencia, y los datos estadisticos se utilizo el siguiete codigo:
 
@@ -410,11 +412,15 @@ Esto muestra claramente que la señal es predominantemente de baja frecuencia, c
 - Thai, J. (2025, 20 de mayo). Explicación de la tasa de Nyquist y el filtro antialiasing. ErdosMiller. https://info.erdosmiller.com/es/blog/explicaci%C3%B3n-de-la-tasa-de-nyquist-y-el-filtro-antialiasing
 - Cooley, J. W., & Tukey, J. W. (1965). An algorithm for the machine calculation of complex Fourier series. Mathematics of Computation, 19(90), 297–301. 
 Department of Computer Science
+
 -Welch, P. (1967). The use of fast Fourier transform for the estimation of power spectra: A method based on time averaging over short, modified periodograms. (Ver explicaiones y recursos). 
+
 -Oppenheim, A. V., & Willsky, A. S. (1996). Signals and Systems. Prentice Hall. 
 Materias UBA
+
 -Proakis, J. G., & Manolakis, D. G. (1996). Digital Signal Processing: Principles, Algorithms and Applications. Prentice Hall. 
 ACM Digital Library
+
 -Belkhiria, C., et al. (2022). EOG-Based Human–Computer Interface: 2000–2020 Review. Sensors / review article. 
 PMC
 
