@@ -41,7 +41,10 @@ Teniendo el sistema h[n] = {5,6,0,8,3,4} y la señal x[n] = {1,0,7,6,7,3,6,2,2,9
    
 
 
-**Silvia..**
+**Silvia Vargas**
+Primero hacemos el cálculo de la convolución a mano de la señal `y(n) = x(n) + h(n)` a través del método enseñado, teniendo en cuenta que `x(n) = {1,0,5,4,2,8,4,0,8,8}` y que `h(n) = {5,6,0,0,8,5,6}`, la cual quedaría de la siguiente forma:
+
+y nos dará una gráfica de la siguiente forma:
 
 **Alejandra Torres**
 
@@ -76,10 +79,6 @@ Teniendo el sistema h[n] = {5,6,0,7,4,8} y la señal x[n] = {1,0,1,1,3,2,1,5,9,7
 <img width="571" height="455" alt="image" src="https://github.com/user-attachments/assets/e269c405-a4fc-4c6b-972a-25f58aaa97be" />
 
 Los resultados fueron exactamente iguales en ambos casos, tanto en los valores de y[n] como en la gráfica obtenida, confirmando que el procedimiento manual y el programado son correctos.
-**Silvia Vargas**
-Primero hacemos el cálculo de la convolución a mano de la señal ´y(n) = x(n) + h(n)´ a través del método enseñado, teniendo en cuenta que ´x(n) = {1,0,5,4,2,8,4,0,8,8}´ y que ´h(n) = {5,6,0,0,8,5,6}´, la cual quedaría de la siguiente forma:
-
-y nos dará una gráfica de la siguiente forma:
 
 
 
