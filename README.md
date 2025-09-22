@@ -150,14 +150,45 @@ Teniendo el sistema h[n] = {5,6,0,7,4,8} y la señal x[n] = {1,0,1,1,3,2,1,5,9,7
 
 4. Encuentre la representación gráfica y secuencial usando Python.
 
-       plt.stem(range(len(y)), y)
-       plt.title("señal")
-       plt.xlabel("n")
-       plt.ylabel("y[n]")
-       plt.grid()
+       import numpy as np
+       import matplotlib.pyplot as plt
+
+       h = [5, 6, 0, 0, 7, 4, 8]
+       x = [1, 0, 1, 1, 3, 2, 1, 5, 9, 7]
+
+       x_n = np.arange(len(x))
+       h_n = np.arange(len(h))
+
+       y = np.convolve(x, h)
+       y_n = np.arange(len(y))
+
+       fig, axs = plt.subplots(3, 1, figsize=(10, 8), sharex=False)
+
+       # Grafica x(n)
+       axs[0].stem(x_n, x)
+       axs[0].set_title("x(n) = Alejandra Torres")
+       axs[0].set_ylabel("x[n]")
+       axs[0].grid(True)
+
+       # Grafica h(n)
+       axs[1].stem(h_n, h)
+       axs[1].set_title("h(n) = Alejandra Torres")
+       axs[1].set_ylabel("h[n]")
+       axs[1].grid(True)
+
+       # Grafica y(n)
+       axs[2].stem(y_n, y)
+       axs[2].set_title("y(n) = Alejandra Torres")
+       axs[2].set_xlabel("n")
+       axs[2].set_ylabel("y[n]")
+       axs[2].grid(True)
+
+       plt.tight_layout()
        plt.show()
 
-<img width="571" height="455" alt="image" src="https://github.com/user-attachments/assets/e269c405-a4fc-4c6b-972a-25f58aaa97be" />
+       print("La señal resultante y[n] es:", y)
+
+<img width="816" height="651" alt="image" src="https://github.com/user-attachments/assets/d2e1284a-caf4-4ae2-9889-1bf47f5f9090" />
 
 Los resultados fueron exactamente iguales en ambos casos, tanto en los valores de y[n] como en la gráfica obtenida, confirmando que el procedimiento manual y el programado son correctos.
 
@@ -343,8 +374,11 @@ Después de los 20 Hz, la potencia cae de forma significativa, lo que reafirma q
 Se calcularon los principales estadísticos en el dominio de la frecuencia: la frecuencia media, que indica el punto central de la energía en el espectro; la frecuencia mediana, que divide la energía en dos partes iguales; y la desviación estándar, que mide la dispersión de la energía alrededor de la media.
 
 === Estadísticos en Frecuencia (0-100 Hz) ===
+
 Frecuencia media: 25.14 Hz
+
 Frecuencia mediana: 14.40 Hz
+
 Desviación estándar: 25.09 Hz
 
     plt.figure(figsize=(12,4))
