@@ -139,6 +139,61 @@ Los resultados fueron exactamente iguales en ambos casos, tanto en los valores d
 
 
 ### Parte B:
+Para la parte B será necesario calcular la correlación cruzada de dos señales que serán las siguientes:
+`x1[nTs] = cos(2π100nTs) para 0 ≤ n < 9`  y `x2[nTs] = sin(2π100nTs) para 0 ≤ n <9` y para `Ts = 1.25ms`
+Comenzaremos haciendo el cálculo de la correlación cruzada a mano que nos dará lo siguiente: 
+
+Y luego haremos la gráfica.
+
+
+Y procederemos con el código en Python para verificar que lo hecho a mano es correcto: 
+En primer lugar se declaran las variables y las señales que serán correlacionadas.
+```
+Ts = 1.25e-3
+f0 = 100
+n = np.arange(9)
+
+x1 = np.cos(2*np.pi*f0*n*Ts)
+x2 = np.sin(2*np.pi*f0*n*Ts)
+```
+Y a través de funciones de Python calculamos la correlación cruzada.
+```
+N = len(x1)
+r = []
+lags = range(-N+1, N)
+```
+Donde `N` es el número de muestras de la señal, que en este caso serán 9, `r` será un vector que almacenará los valores de correlación para cada retardo y `lags` es el rango de retardos (k) que va desde -(N-1) hasta +(N-1).
+Y seguiremos con el cálculo de los retardos: 
+
+```
+for k in lags:
+    suma = 0
+    for i in range(N):
+        j = i + k
+        if 0 <= j < N:
+            suma += x1[i] * x2[j]
+    r.append(suma)
+print("Valores de la correlación cruzada:")
+for k, val in zip(lags, r):
+    print(f"k={k:2d}  ->  {val:.4f}")
+```
+En esta parte se hace un ciclo que recorre cada retardo `k (for k, val in zip(lags, r):)` y un ciclo que recorrerá cada muestra `i` y hará la suma de las muestras con los retardos a través de ` j = i + k`.
+También será necesario usar un if para asegurar que `j`  está dentro del rango de la señal, si es así hará la suma de los productos y almacenará el resultado en la lista `r`. 
+Básicamente cumple la fórmula que fue usada cuando se calculó la correlación cruzada a mano.
+Y se imprimen los retardos:
+Finalmente graficamos y obtenemos lo siguiente: 
+```
+# Graficamos
+plt.stem(lags, r)
+plt.title("Correlación cruzada")
+plt.xlabel("Retardo k")
+plt.ylabel("r (x1x2)")
+plt.grid(True)
+plt.show()
+```
+
+
+Tendremos en cuenta que es útil en el procesamiento digital de señales para la detección de una señal conocida dentro de ruido, para estimar retrasos entre dos señales medidas con dos sensores distintos, para analizar la similitud entre canales (confirmando si dos señales fueron capturadas con la misma fuente o si son filtradas una de la otra) y para analizar sistemas lineales (estudiando la respuesta de un sistema probando con señales y correlacionando la salida con la entrada).
 
 ### Parte C:
 Un electroculograma (EOG) es una prueba médica utilizada para medir la actividad eléctrica generada por los movimientos oculares, registra la diferencia de potencial eléctrico entre la córnea (positiva) y la retina (negativa), formando un dipolo eléctrico. Se colocan pequeños electrodos cerca de los ojos para captar los cambios de voltaje que ocurren cuando los ojos se mueven. Es especialmente útil en oftalmología y neurología para evaluar el funcionamiento de ciertas estructuras del ojo y detectar posibles alteraciones, la prueba dura unos 45 minutos e incluye fases de adaptación a la luz y oscuridad.  
