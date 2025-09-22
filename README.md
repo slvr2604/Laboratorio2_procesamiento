@@ -184,23 +184,9 @@ En esta parte se hace un ciclo que recorre cada retardo `k (for k, val in zip(la
 También será necesario usar un if para asegurar que `j`  está dentro del rango de la señal, si es así hará la suma de los productos y almacenará el resultado en la lista `r`. 
 Básicamente cumple la fórmula que fue usada cuando se calculó la correlación cruzada a mano.
 Y se imprimen los retardos:
-`k=-8  ->  0.0000
-k=-7  ->  0.7071
-k=-6  ->  1.5000
-k=-5  ->  1.4142
-k=-4  ->  0.0000
-k=-3  ->  -2.1213
-k=-2  ->  -3.5000
-k=-1  ->  -2.8284
-k= 0  ->  -0.0000
-k= 1  ->  2.8284
-k= 2  ->  3.5000
-k= 3  ->  2.1213
-k= 4  ->  -0.0000
-k= 5  ->  -1.4142
-k= 6  ->  -1.5000
-k= 7  ->  -0.7071
-k= 8  ->  -0.0000`
+`k=-8  =  0.0000, k=-7  =  0.7071, k=-6  =  1.5000, k=-5  =  1.4142, k=-4  =  0.0000, k=-3  =  -2.1213, k=-2  =  -3.5000, k=-1  =  -2.8284, k= 0  =  -0.0000, k= 1  =  2.8284, k= 2  =  3.5000, k= 3  =  2.1213, k= 4  =  -0.0000, k= 5  =  -1.4142
+, k= 6  =  -1.5000, k= 7  =  -0.7071, k= 8  =  -0.0000`
+
 Finalmente graficamos y obtenemos lo siguiente: 
 ```
 # Graficamos
