@@ -46,6 +46,7 @@ Primero hacemos el cálculo de la convolución a mano de la señal `y(n) = x(n) 
 
 y nos dará una gráfica de la siguiente forma:
 
+
 **Alejandra Torres**
 
 Teniendo el sistema h[n] = {5,6,0,7,4,8} y la señal x[n] = {1,0,1,1,3,2,1,5,9,7}:  
