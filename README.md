@@ -309,12 +309,60 @@ En cuanto a su periodicidad, la señal es **aperiódica**, dado que no presenta 
 
 Finalmente, la señal es **analógica**, ya que se origina como una variación continua de potencial eléctrico en la superficie de la piel alrededor de los ojos. Sin embargo, en este trabajo se utiliza su versión digitalizada, la cual permite procesarla y analizarla mediante herramientas computacionales.
 
+Para hallar la transformada de fourier de la señal, la densidad espectral de potencia, y los datos estadisticos se utilizo el siguiete codigo:
+
+    fft_resultado = np.fft.fft(senal_mV - np.mean(senal_mV))
+    frecuencias_fft = np.fft.fftfreq(len(fft_resultado), 1/frecuencia_muestreo)
+    magnitud_fft = np.abs(fft_resultado)
+
+Se aplicó la Transformada de Fourier a la señal, lo que permitió transformarla del dominio del tiempo al dominio de la frecuencia. De esta forma se identificaron las frecuencias presentes en la señal. Para un análisis más claro, se graficaron solo las frecuencias entre 0 y 100 Hz, que es donde se concentra la información de interés.
+
+<img width="1001" height="393" alt="image" src="https://github.com/user-attachments/assets/996bb492-b8d8-48e6-bd99-d48105f1dcf2" />
+
+En esta gráfica se observan los picos de frecuencia de la señal. La energía está muy concentrada entre 0 y 15 Hz, con un pico principal cerca de 5 Hz, lo que indica que la señal tiene componentes de baja frecuencia dominantes.
+A partir de 20 Hz, la magnitud disminuye drásticamente y se mantiene muy baja hasta los 100 Hz, lo que confirma que casi no hay contenido en altas frecuencias.
+Las pequeñas variaciones en la parte alta del espectro son principalmente ruido del sistema de adquisición o interferencias externas.
 
 
+    frecuencias_psd, potencia_psd = welch(senal_mV, frecuencia_muestreo, nperseg=1024)
+
+Luego se calculó la Densidad Espectral de Potencia (PSD) empleando el método de Welch, con el fin de visualizar cómo se distribuye la energía de la señal a lo largo del espectro de frecuencias de manera más estable y menos sensible al ruido que la FFT.
+
+<img width="1004" height="393" alt="image" src="https://github.com/user-attachments/assets/2d7d4c58-7fa2-4f01-8e74-f7443a2ef301" />
+
+La PSD muestra la distribución de energía de forma suavizada y más fácil de interpretar.
+La mayor densidad de potencia se encuentra por debajo de 10 Hz, lo que significa que casi toda la información relevante de la señal está en ese rango.
+Después de los 20 Hz, la potencia cae de forma significativa, lo que reafirma que las frecuencias altas tienen muy poca contribución útil.
 
 
+    frecuencia_media = np.sum(frecuencias_filtradas * magnitud_filtrada) / np.sum(magnitud_filtrada)
+    magnitud_acumulada = np.cumsum(magnitud_filtrada)
+    frecuencia_mediana = frecuencias_filtradas[np.where(magnitud_acumulada >= magnitud_acumulada[-1]/2)[0][0]]
+    desviacion_frecuencia = np.sqrt(np.sum(((frecuencias_filtradas - frecuencia_media)**2) * magnitud_filtrada) / np.sum(magnitud_filtrada))
+    
+Se calcularon los principales estadísticos en el dominio de la frecuencia: la frecuencia media, que indica el punto central de la energía en el espectro; la frecuencia mediana, que divide la energía en dos partes iguales; y la desviación estándar, que mide la dispersión de la energía alrededor de la media.
 
+=== Estadísticos en Frecuencia (0-100 Hz) ===
+Frecuencia media: 25.14 Hz
+Frecuencia mediana: 14.40 Hz
+Desviación estándar: 25.09 Hz
 
+    plt.figure(figsize=(12,4))
+    plt.hist(frecuencias_filtradas, bins=50, weights=magnitud_filtrada)
+    plt.xlim(0, 80)
+    plt.title("Histograma de Frecuencias (0-80 Hz)")
+    plt.xlabel("Frecuencia [Hz]")
+    plt.ylabel("Energía relativa")
+    plt.grid()
+    plt.show()
+
+Finalmente, se elaboró un histograma de frecuencias ponderado por la magnitud, que permitió visualizar de forma sencilla en qué rangos se concentra la energía de la señal. Este resultado confirmó que la mayor parte de la energía está en las frecuencias bajas, como es esperado para señales biológicas como la EOG.
+
+<img width="1010" height="393" alt="image" src="https://github.com/user-attachments/assets/afa189f6-9c61-4819-8eef-477517c86398" />
+
+El histograma confirma de manera visual que la mayoría de la energía está en frecuencias bajas.
+La mayor cantidad de barras se encuentra acumulada entre 0 y 20 Hz, y casi no aparecen barras en frecuencias más altas, lo que coincide con la FFT y la PSD.
+Esto muestra claramente que la señal es predominantemente de baja frecuencia, como es característico de una señal EOG.
 
 
 ### Referencias:
