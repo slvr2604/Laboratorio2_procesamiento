@@ -188,7 +188,7 @@ Teniendo el sistema h[n] = {5,6,0,7,4,8} y la señal x[n] = {1,0,1,1,3,2,1,5,9,7
 
        print("La señal resultante y[n] es:", y)
 
-<img width="816" height="651" alt="image" src="https://github.com/user-attachments/assets/d2e1284a-caf4-4ae2-9889-1bf47f5f9090" />
+<img width="989" height="790" alt="image" src="https://github.com/user-attachments/assets/8dde492d-a75b-4531-a2af-6367a66e4ff2" />
 
 Los resultados fueron exactamente iguales en ambos casos, tanto en los valores de y[n] como en la gráfica obtenida, confirmando que el procedimiento manual y el programado son correctos.
 
