@@ -179,10 +179,28 @@ print("Valores de la correlación cruzada:")
 for k, val in zip(lags, r):
     print(f"k={k:2d}  ->  {val:.4f}")
 ```
+
 En esta parte se hace un ciclo que recorre cada retardo `k (for k, val in zip(lags, r):)` y un ciclo que recorrerá cada muestra `i` y hará la suma de las muestras con los retardos a través de ` j = i + k`.
 También será necesario usar un if para asegurar que `j`  está dentro del rango de la señal, si es así hará la suma de los productos y almacenará el resultado en la lista `r`. 
 Básicamente cumple la fórmula que fue usada cuando se calculó la correlación cruzada a mano.
 Y se imprimen los retardos:
+`k=-8  ->  0.0000
+k=-7  ->  0.7071
+k=-6  ->  1.5000
+k=-5  ->  1.4142
+k=-4  ->  0.0000
+k=-3  ->  -2.1213
+k=-2  ->  -3.5000
+k=-1  ->  -2.8284
+k= 0  ->  -0.0000
+k= 1  ->  2.8284
+k= 2  ->  3.5000
+k= 3  ->  2.1213
+k= 4  ->  -0.0000
+k= 5  ->  -1.4142
+k= 6  ->  -1.5000
+k= 7  ->  -0.7071
+k= 8  ->  -0.0000`
 Finalmente graficamos y obtenemos lo siguiente: 
 ```
 # Graficamos
@@ -193,7 +211,9 @@ plt.ylabel("r (x1x2)")
 plt.grid(True)
 plt.show()
 ```
+
 <img width="565" height="455" alt="image" src="https://github.com/user-attachments/assets/94efe047-9294-4200-8f44-7cedea577551" />
+
 Y podremos observar que tiene una secuencia discreta y simétrica, ya que tiene valores positivos a la derecha de `k = 0` y hacia la izquierda estos son negativos. Esta señal a su vez alterna valores positivos y negativos, lo que nos muestra una especie de onda.
 Observamos que su máximo principal alrededor de k ≈ +2, con un valor cercano a 3.4, y su mínimo principal alrededor de k ≈ –2, con un valor cercano a –3.3. Lo que nos puede indicar que la mayor similitud entre ambas ondas se da cuando la señal x2 se desplaza aproximadamente 2 muestras hacia la derecha con respecto a x1. Es decir que la gráfica confirma que x1 y x2 son la misma frecuencia pero con un desfase de 90°, y la correlación cruzada capta ese desfase como el pico positivo en k=+2 y con el negativo en k=–2.
 
